@@ -8,7 +8,7 @@ body {
   font-family: "Hahmlet", serif;
   font-weight: 400;
   color: black !important;
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(255, 255, 255);
   display: flex;
   height: 100vh;
 }
@@ -17,38 +17,49 @@ body {
   width: 100%;
   margin: auto ;
 }
-.app__wrapper{
-  position: relative;
-}
 
 .carousel{
-  background-color: white;
-  border: 3px solid #F5821F;
-  border-radius: 15px;
-  position: relative;
+  background-color: #0FA0C5;  
 }
 .carousel::after,.carousel::before {
   content: "";
   position: absolute;
-  top: 3%;
-  width: 15px;
-  height: 95%;
-  right: -18px;
-  background-color: #0FA0C5;
+  left: 0;
+  width: 100%;
+  height: 18px;
+}
+.carousel::after{
+  top: 0;
+  background-color: #ffffff;
 }
 .carousel::before{
-  left: -18px;
+  bottom: 0;
+  background-color: #deecf6;
 }
+.carousel-inner{
+  z-index: 2;
+  background-color: white;
+  width: 95%;
+  margin: auto;
+  border: 3px solid #F5821F;
+  border-radius: 15px;
+  position: relative;
+}
+/* footer */
 .app__options {
   background-color: #deecf6;
 }
-
+/* button */
+.carousel-inner h5,.carousel-inner p{
+  font-size: 1.5rem;
+}
 .quiz__question{
   background-color: #0FA0C5;
   color: white;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
+/*  */
 #header__hiddenImage,
 #header__hiddenHelp {
   position: absolute;
@@ -62,6 +73,8 @@ body {
 .image__wrapper,
 .help__wrapper {
   position: relative;
+  border: 3px solid #F5821F;
+  border-radius: 10px;
   height: 520px;
   z-index: 100;
   overflow: auto;
@@ -72,7 +85,6 @@ body {
 .image__wrapper > img {
   height: 100%;
   border-radius: 10px;
-  border: 5px solid black;
 }
 .image__wrapper > button,
 .help__wrapper > button {
@@ -82,7 +94,7 @@ body {
   top: 0;
   right: 0;
 }
-
+/* true and false sign */
 .quiz__question.correct__answer,
 .quiz__question.wrong__answer {
   position: relative;
@@ -121,6 +133,7 @@ body {
     opacity: 1;
   }
 }
+/* footer style */
 #app__restartQuiz,
 #app__replayQuestion,
 #app__showAnswer,
@@ -146,7 +159,7 @@ body {
 }
 .quizNumber{
   border: 3px solid #5cbbd7;
-  padding: 10px 10px;
+  padding: 5px 10px;
   width: 100px;
   text-align: center;
   background-color: white;

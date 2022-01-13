@@ -19,7 +19,6 @@ function getAnswerData() {
       (ele) => ele.dataset.answer !== "correct",
     )[0];
     wrongAnswer.setAttribute("disabled",true);
-    wrongAnswer.style.color="red";
     isQuestionChoosed();
   } else {
     this.classList.add("wrong__answer");
@@ -93,12 +92,12 @@ let currentSlider = document.getElementById("current__slider");
 let lastSlider = document.getElementById("last__slider");
 function getSlidersInfo() {
   let slidersCount = myCarousel.children[0].children.length;
-  lastSlider.innerHTML = slidersCount;
+  lastSlider.innerHTML = slidersCount -2;
   currentSlider.innerHTML = slidersCount - slidersCount + 1;
   disableSliderButton(currentSlider.innerHTML, slidersCount);
 }
 myCarousel.addEventListener("slide.bs.carousel", function (e) {
-  let slidersCount = document.querySelectorAll(".carousel-item").length;
+  let slidersCount = document.querySelectorAll(".carousel-item").length ;
   currentSlider.innerHTML = e.to + 1;
   disableSliderButton(currentSlider.innerHTML, slidersCount);
   setTimeout(isQuestionChoosed, 900);

@@ -23,56 +23,61 @@
     <div class="english__app">
       <div class="container">
         <div class="row">
-          <!-- <div class="col-12 col-lg-8 mx-auto row">
-            <h2 class="col-10">circle,choose and write</h2>
-              <div class="col-2">
-                <button class="btn ">overlay</button> 
-                <button class="btn ">overlay</button>
-              </div>
-          </div> -->
-          <div class="app__wrapper col-11 col-lg-8 mx-auto">
-            <div id="header__hiddenImage" class="hide__header w-100">
-              <div class="image__wrapper">
-                <img class="w-100" src="./images/dummy.jpg" alt="" />
-                <button class="image__closeButton d-block">
-                  <img class="w-100" src="./images/close_icon.png" alt="" />
-                </button>
-              </div>
-            </div>
-            <div id="header__hiddenHelp" class="hide__header w-100">
-              <div class="help__wrapper">
-                <h3 class="p-3">Help content goes here.</h3>
-                <button class="image__closeButton d-block">
-                  <img class="w-100" src="./images/close_icon.png" alt="" />
-                </button>
-              </div>
-            </div>
-            <div class="app__header d-flex align-items-center">
+          <div class="app__wrapper col-11 col-lg-9 mx-auto">
+                
+                
+            <!-- header part -->
+            <div class="app__header d-flex align-items-center pb-3">
               <h4>Circle, choose and write</h4>
-              <div class="header__button ms-auto">
-                <button id="header__buttonImage">
-                  <img src="./images/resourse_icon.png" alt="" />
+              <div class="header__button d-flex gap-3 ms-auto">
+                <button id="header__buttonImage" >
+                  <div class="footerBtn">
+                    <img src="./images/resourse_icon.png" class="w-100" alt="" />
+                  </div>
                 </button>
-                <button id="header_buttonHelp">
-                  <img src="./images/help_icon.png" alt="" />
+                <button id="header_buttonHelp" >
+                  <div class="footerBtn">
+                    <img src="./images/help_icon.png" class="w-100" alt="" />
+                  </div>
                 </button>
               </div>
             </div>
+            <!-- end header -->
+            <!-- start carusel -->
             <div
               id="carouselExampleCaptions"
               class="carousel slide"
               data-bs-ride="carousel"
               data-bs-interval="false"
             >
-              <div class="carousel-inner py-5">
+        
+              <div class="carousel-inner py-4">
+                <!-- start overlay -->
+                <div id="header__hiddenImage" class="hide__header w-100">
+                  <div class="image__wrapper">
+                    <img class="w-100" src="./images/dummy.jpg" alt="" />
+                    <button class="image__closeButton d-block">
+                      <img class="w-100" src="./images/close_icon.png" alt="" />
+                    </button>
+                  </div>
+                </div>
+                <div id="header__hiddenHelp" class="hide__header w-100">
+                  <div class="help__wrapper">
+                    <h3 class="p-3">Help content goes here.</h3>
+                    <button class="image__closeButton d-block">
+                      <img class="w-100" src="./images/close_icon.png" alt="" />
+                    </button>
+                  </div>
+                </div>
+                <!-- end overlay -->
                 <div class="carousel-item active row">
                   <img
                     src="./images/1.png"
-                    class="d-block mx-auto w-50 "
+                    class="d-block mx-auto w-75 "
                     alt="..."
                   />
-                  <div class="text-center w-75 mx-auto d-md-block text-dark">
-                    <h5>
+                  <div class="text-center w-100 mx-auto d-md-block text-dark">
+                    <h5 class="pb-4">
                       What's
                       <button
                         class="btn  quiz__question"
@@ -86,7 +91,7 @@
                         >that</button
                       >?
                     </h5>
-                    <p>
+                    <p >
                       <button
                         class="btn  quiz__question"
                         data-answer="correct"
@@ -105,11 +110,11 @@
                 <div class="carousel-item">
                   <img
                     src="./images/2.png"
-                    class="d-block mx-auto w-50"
+                    class="d-block mx-auto w-75"
                     alt="..."
                   />
-                  <div class="w-75 mx-auto text-center d-md-block text-dark">
-                    <h5>
+                  <div class="w-100 mx-auto text-center d-md-block text-dark">
+                    <h5 class="pb-4">
                       What are
                       <button
                         class="btn  quiz__question"
@@ -142,11 +147,11 @@
                 <div class="carousel-item">
                   <img
                     src="./images/3.png"
-                    class="d-block mx-auto w-50"
+                    class="d-block mx-auto w-75"
                     alt="..."
                   />
-                  <div class="w-75 mx-auto text-center d-md-block text-dark">
-                    <h5>
+                  <div class="w-100 mx-auto text-center d-md-block text-dark">
+                    <h5 class="pb-4">
                       What's
                       <button
                         class="btn  quiz__question"
@@ -176,49 +181,13 @@
                     </p>
                   </div>
                 </div>
-                <div class="carousel-item">
-                  <img
-                    src="./images/4.png"
-                    class="d-block mx-auto w-50"
-                    alt="..."
-                  />
-                  <div class="w-75 mx-auto text-center d-md-block text-dark">
-                    <h5>
-                      What are
-                      <button
-                        class="btn  quiz__question"
-                        data-answer="correct"
-                        >these</button
-                      >
-                      /
-                      <button
-                        class="btn  quiz__question"
-                        data-answer="wrong"
-                        >those</button
-                      >?
-                    </h5>
-                    <p>
-                      <button
-                        class="btn  quiz__question"
-                        data-answer="wrong"
-                        >It's</button
-                      >
-                      /
-                      <button
-                        class="btn  quiz__question"
-                        data-answer="correct"
-                        >They're</button
-                      >
-                      yellow compasses.
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
-            <div class="app__options d-flex align-items-center justify-content-end">
+            <!-- end carusel -->
+            <!-- start footer -->
+            <div class="app__options px-3 d-flex align-items-center justify-content-end gap-2">
               <button id="app__restartQuiz">
                 <div class="footerBtn left" >
-                  <span></span>
                   <img src="./images/replay_icon.png" class="w-100" alt="" />
                 </div>
               </button>
@@ -228,11 +197,11 @@
                 </div>
               </button>
               <button id="app__showAnswer" >
-                <div class="show__answer">
+                <div class="show__answer ms-sm-3">
                   <img src="./images/showAns_icon.png" class="w-100" alt="" />
                 </div>
               </button>
-              <div id="app__quizControl" class="d-flex align-items-center">
+              <div id="app__quizControl" class="d-flex align-items-center gap-2 ms-sm-3">
                 <button
                   class="control__back btn "
                   data-bs-target="#carouselExampleCaptions"
@@ -244,7 +213,7 @@
 
                 </div>
                 </button>
-                <div class="quizNumber">
+                <div class="quizNumber my-3">
                   <div class="fs-4">
                     <span id="current__slider"></span> of
                     <span id="last__slider"></span>
@@ -263,12 +232,13 @@
                 </button>
               </div>
             </div>
+            <!-- end footer -->
           </div>
         </div>
-          <div></div>
         </div>
       <!-- </div> -->
     </div>
+    <!-- audio -->
     <audio
       src="./audio/wrong_answer.ogg"
       preload="auto"
