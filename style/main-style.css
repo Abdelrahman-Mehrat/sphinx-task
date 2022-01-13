@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@400;500&display=swap");
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Hahmlet", serif;
+  font-weight: 400;
+  color: black !important;
+  background-color: rgb(245, 245, 245);
+  display: flex;
+  height: 100vh;
+}
+
+.english__app {
+  width: 100%;
+  margin: auto ;
+}
+.app__wrapper{
+  position: relative;
+}
+
+.carousel{
+  background-color: white;
+  border: 3px solid #F5821F;
+  border-radius: 15px;
+  position: relative;
+}
+.carousel::after,.carousel::before {
+  content: "";
+  position: absolute;
+  top: 3%;
+  width: 15px;
+  height: 95%;
+  right: -18px;
+  background-color: #0FA0C5;
+}
+.carousel::before{
+  left: -18px;
+}
+.app__options {
+  background-color: #deecf6;
+}
+
+.quiz__question{
+  background-color: #0FA0C5;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+#header__hiddenImage,
+#header__hiddenHelp {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hide__header,
+.hide__header {
+  display: none;
+}
+.image__wrapper,
+.help__wrapper {
+  position: relative;
+  height: 520px;
+  z-index: 100;
+  overflow: auto;
+}
+.help__wrapper {
+  background-color: #efefef;
+}
+.image__wrapper > img {
+  height: 100%;
+  border-radius: 10px;
+  border: 5px solid black;
+}
+.image__wrapper > button,
+.help__wrapper > button {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.quiz__question.correct__answer,
+.quiz__question.wrong__answer {
+  position: relative;
+}
+.quiz__question.correct__answer::after {
+  content: "";
+  background-image: url("../images/tikMark.png");
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  color: black;
+}
+
+.quiz__question.wrong__answer::after {
+  content: "";
+  background-image: url("../images/crossMark.png");
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  color: black;
+  animation-name: wrongAnswer;
+  animation-duration: 0.4s;
+  animation-iteration-count: 2;
+}
+@keyframes wrongAnswer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#app__restartQuiz,
+#app__replayQuestion,
+#app__showAnswer,
+#prev__question,
+#next__question,
+#header__buttonImage,
+#header_buttonHelp,
+.image__closeButton {
+  display: contents;
+}
+.image__closeButton {
+  padding: 0;
+  border: none;
+}
+.footerBtn{
+  width: 50px;
+}
+.footerBtn.left{
+  margin-right: auto;
+}
+.show__answer{
+  width: 70px;
+}
+.quizNumber{
+  border: 3px solid #5cbbd7;
+  padding: 10px 10px;
+  width: 100px;
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+}
