@@ -17,7 +17,7 @@ body {
   width: 100%;
   margin: auto ;
 }
-
+/* for background */
 .carousel{
   background-color: #0FA0C5;  
 }
@@ -45,6 +45,7 @@ body {
   border-radius: 15px;
   position: relative;
 }
+/* end carousel */
 /* footer */
 .app__options {
   background-color: #deecf6;
@@ -58,6 +59,9 @@ body {
   color: white;
   font-weight: 700;
   font-size: 1.4rem;
+}
+.quiz__question:hover{
+  color: white;
 }
 /*  */
 #header__hiddenImage,

@@ -87,7 +87,10 @@ function showQuestionAnswer() {
 }
 /* -------------------- functions for stop buttons action ------------------- */
 let prevQuestion = document.getElementById("prev__question");
+let prevQ__style = document.querySelector(".prev__question");
+let slider__btn = document.querySelectorAll(".slider__btn");
 let nextQuestion = document.getElementById("next__question");
+let nextQ__style = document.querySelector(".next__question")
 let currentSlider = document.getElementById("current__slider");
 let lastSlider = document.getElementById("last__slider");
 function getSlidersInfo() {
@@ -106,10 +109,16 @@ myCarousel.addEventListener("slide.bs.carousel", function (e) {
 function disableSliderButton(currentSlider, slidersCount) {
   prevQuestion.removeAttribute("disabled");
   nextQuestion.removeAttribute("disabled");
+  prevQ__style.style.opacity = "1";
+  nextQ__style.style.opacity = "1";
+
   if (+currentSlider === 1) {
     prevQuestion.setAttribute("disabled", "true");
-  } else if (+currentSlider === slidersCount) {
+    prevQ__style.style.opacity = "0.5";
+  }
+   else if (+currentSlider === slidersCount) {
     nextQuestion.setAttribute("disabled", "true");
+    nextQ__style.style.opacity= " 0.5"
   } 
     
 }
