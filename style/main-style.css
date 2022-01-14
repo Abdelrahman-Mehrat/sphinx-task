@@ -103,28 +103,22 @@ body {
 .quiz__question.wrong__answer {
   position: relative;
 }
-.quiz__question.correct__answer::after {
+.quiz__question.correct__answer::after,.quiz__question.wrong__answer::after {
   content: "";
-  background-image: url("../images/tikMark.png");
   background-size: contain;
   width: 20px;
   height: 20px;
   position: absolute;
   top: -20px;
-  left: 20px;
+  right: 0px ;
   color: black;
+}
+.quiz__question.correct__answer::after {
+  background-image: url("../images/tikMark.png");
 }
 
 .quiz__question.wrong__answer::after {
-  content: "";
   background-image: url("../images/crossMark.png");
-  background-size: contain;
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: -20px;
-  left: 20px;
-  color: black;
   animation-name: wrongAnswer;
   animation-duration: 0.4s;
   animation-iteration-count: 2;
