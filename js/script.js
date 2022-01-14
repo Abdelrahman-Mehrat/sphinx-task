@@ -45,7 +45,7 @@ function removeAnswersClasses() {
 function getFirstSlider() {
   let nextQuestion = document.getElementById("next__question");
   let allSliders = document.querySelectorAll(".carousel-inner .carousel-item");
-  let firstSlider = myCarousel.children[0].children[0];
+  let firstSlider = myCarousel.children[0].children[2];
   allSliders.forEach((slider) => {
     slider.classList.remove("active");
   });
